@@ -31,3 +31,7 @@
 **Adversarial Learning for Text**
 -  [Adversarial multi-task learning for text classification](https://arxiv.org/pdf/1704.05742.pdf) (ACL'17)
 -  [Adversarial training methods for semi-supervised text classification](https://arxiv.org/pdf/1605.07725.pdf) (ICLR'16)
+-  
+
+**Class Imbalance Problem**
+- [Global-and-Local Aware Data Generation for the Class Imbalance Problem](https://epubs.siam.org/doi/pdf/10.1137/1.9781611976236.35) (SDM'20)
