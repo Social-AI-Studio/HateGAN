@@ -47,19 +47,17 @@ Results
 
 ## Reference  
 Referred paper:
-'''
+```
 @inproceedings{DBLP:conf/aaai/YuZWY17,
-  author    = {Lantao Yu and
-               Weinan Zhang and
-               Jun Wang and
-               Yong Yu},
+  author    = {Lantao Yu and Weinan Zhang and Jun Wang and Yong Yu},
   title     = {SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient},
   booktitle = {Conference on Artificial Intelligence,},
   pages     = {2852--2858},
   publisher = {{AAAI} Press},
   year      = {2017}
-}
-## Acknowledge
+}     
+  
+## Acknowledge  
 To cite:
 ```
 @inproceedings{cao2020hategan,
@@ -67,5 +65,4 @@ To cite:
   author={Cao, Rui and Lee, Roy Ka-Wei},
   booktitle={The 28th International Conference on Computational Linguistics},
   pages={11--20},
-  year={2020}
-| COMBINE | Multi  |90.51 |90.74|90.54|57.6       |47.0      |51.4     |
+  year={2020}```
