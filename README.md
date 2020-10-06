@@ -1,6 +1,8 @@
 ## Problem Overview
 Hate speech is detection often has to deal performing classification on imbalance dataset. The generative models such as GAN and VAE have show promising results in generating synthetic datasets to help supplement datasets to overcome the imbalance data problem. In this study, we want to explore how the different generative models can help generate posts to overcome the imbalance dataset problem in hate speech detection.
 
+
+Most of existing methods for hate speech detection adopt a supervised aproach that heavily depends on labeled datasets for training. The imbalance of datasets may be detrimental to performance of methods. 
 ## Experiments for Baseline Models
 
 Data Distribution  
@@ -43,23 +45,27 @@ Results
 | FOUNTA  | Multi  |90.59 |91.58|90.86|51.2       |26.8      |35.0     |  
 | COMBINE | Multi  |90.59 |90.78|90.64|56.2       |48.6      |52.0     |
 
-## Experimetns for HateGAN Method 2: Generate Posts then Extract Hate Speech
-In this method, we will generate unlabeled tweets and use a pre-trained classifier to extract the hate tweets from the generate tweets.
-
-Data Distribution after adding the hate speech: 1072
-
-| Dataset | Type   | Label (Count)                                     |
-| :-----: | :----: | :-----------------------------------------------: | 
-| WZ      | Binary | hate (4,507) non-hate (9,767)                     |
-| DT      | Multi  | hate (2,502) offensive (19,190) beither (4,163)   |
-| FOUNTA  | Multi  | hate (4,979) abusive (19,232) normal (1,430)      |  
-| COMBINED| Multi  | hate (3,067) normal (15,075) offensive (19,389)   |
-
-Results
-
-| Dataset | Type   | Prec | Rec | F1  | Prec-Hate | Rec-Hate | F1-Hate |
-| :-----: | :----: | :--: | :-: | :-: | :-------: | :------: | :-----: |
-| WZ      | Binary |80.06  |80.67  |77.81  |69.0 |45.6|49.4      |
-| DT      | Multi  |89.20  |90.02|89.17 |55.2  |27.8 |34.6    |
-| FOUNTA  | Multi  |90.52  |91.56|90.75|53.0|25.2   |34.0   |  
+## Reference  
+Referred paper:
+'''
+@inproceedings{DBLP:conf/aaai/YuZWY17,
+  author    = {Lantao Yu and
+               Weinan Zhang and
+               Jun Wang and
+               Yong Yu},
+  title     = {SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient},
+  booktitle = {Conference on Artificial Intelligence,},
+  pages     = {2852--2858},
+  publisher = {{AAAI} Press},
+  year      = {2017}
+}
+## Acknowledge
+To cite:
+```
+@inproceedings{cao2020hategan,
+  title={HateGAN: Adversarial Generative-Based Data Augmentation for Hate Speech Detection},
+  author={Cao, Rui and Lee, Roy Ka-Wei},
+  booktitle={The 28th International Conference on Computational Linguistics},
+  pages={11--20},
+  year={2020}
 | COMBINE | Multi  |90.51 |90.74|90.54|57.6       |47.0      |51.4     |
