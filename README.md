@@ -1,8 +1,29 @@
 ## Problem Overview
-Hate speech is detection often has to deal performing classification on imbalance dataset. The generative models such as GAN and VAE have show promising results in generating synthetic datasets to help supplement datasets to overcome the imbalance data problem. In this study, we want to explore how the different generative models can help generate posts to overcome the imbalance dataset problem in hate speech detection.
+Most of existing methods for hate speech detection adopt a supervised aproach that heavily depends on labeled datasets for training. The imbalance of datasets may be detrimental to performance of methods. We propose HateGAN, a deep generative reinforcement learning model to address the challenge of imbalance class by augementing datasets with hateful tweets.  
 
+This repository contains code for the implementation of HateGAN.
 
-Most of existing methods for hate speech detection adopt a supervised aproach that heavily depends on labeled datasets for training. The imbalance of datasets may be detrimental to performance of methods. 
+## Dependencies:  
+
+- Python 3.5
+- Pytorch 1.0.0
+
+## Data for Training HateGAN
+
+| Dataset | Label (Count)                                     |
+| :-----: | :-----------------------------------------------: | 
+| WZ      | hate (3,435) non-hate (9,767)                     |
+| DT      | hate (1,430) offensive (19,190) beither (4,163)   |
+| FOUNTA  | hate (3,907) abusive (19,232) spam (13,840) normal (53,011)      |  
+| HateLingo      | hate (11,763)                     |
+
+## Data for Hate Speech Detection
+
+| Dataset | Type   | Label (Count)                                     |
+| :-----: | :----: | :-----------------------------------------------: | 
+| WZ      | Binary | hate (3,435) non-hate (9,767)                     |
+| DT      | Multi  | hate (1,430) offensive (19,190) beither (4,163)   |  
+
 ## Experiments for Baseline Models
 
 Data Distribution  
@@ -24,26 +45,18 @@ Results
 | FOUNTA  | Multi  | 90.72|91.65|90.91|26.9       |26.2      |35.0     |  
 | COMBINE | Multi  | 90.78|91.08|90.85|62.8       |49.0      |88.0     |
 
-## Experiments for HateGAN Method 1: Generate Hate Speech Only
-In this method, we will use GAN model to generate tweets that contain hate speech.
+## Getting Started  
 
-Data Distribution after adding the hate speech: 1099
+- Pretrain the toxic comment detection model, use code in Toxic Model.ipynb
 
-| Dataset | Type   | Label (Count)                                     |
-| :-----: | :----: | :-----------------------------------------------: | 
-| WZ      | Binary | hate (4,534) non-hate (9,767)                     |
-| DT      | Multi  | hate (2,529) offensive (19,190) beither (4,163)   |
-| FOUNTA  | Multi  | hate (5,006) abusive (19,232) normal (1,430)      |
-| COMBINED| Multi  | hate (3,094) normal (15,075) offensive (19,389)   |
+- Train the generative model, use code in HateGAN:  
 
-Results
+    ``` python main.py ``` 
 
-| Dataset | Type   | Prec | Rec | F1  | Prec-Hate | Rec-Hate | F1-Hate |
-| :-----: | :----: | :--: | :-: | :-: | :-------: | :------: | :-----: |
-| WZ      | Binary |79.96 |80.45|77.42|67.8       |46.4      |48.2     |
-| DT      | Multi  |89.29 |90.15|89.45|53.0       |29.6      |37.2     |
-| FOUNTA  | Multi  |90.59 |91.58|90.86|51.2       |26.8      |35.0     |  
-| COMBINE | Multi  |90.59 |90.78|90.64|56.2       |48.6      |52.0     |
+- Evaluate the generated tweets, use code in Test-GAN-gen:  
+
+    ``` python main.py ``` 
+
 
 ## Reference  
 Referred paper:
@@ -69,5 +82,4 @@ To cite:
   title={HateGAN: Adversarial Generative-Based Data Augmentation for Hate Speech Detection},
   author={Cao, Rui and Lee, Roy Ka-Wei},
   booktitle={The 28th International Conference on Computational Linguistics},
-  pages={11--20},
   year={2020}
