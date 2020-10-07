@@ -55,8 +55,13 @@ Referred paper:
   pages     = {2852--2858},
   publisher = {{AAAI} Press},
   year      = {2017}
-}     
-  
+}
+```   
+
+Referred Code:
+<https://github.com/X-czh/SeqGAN-PyTorch>
+
+
 ## Acknowledge  
 To cite:
 ```
@@ -65,4 +70,4 @@ To cite:
   author={Cao, Rui and Lee, Roy Ka-Wei},
   booktitle={The 28th International Conference on Computational Linguistics},
   pages={11--20},
-  year={2020}```
+  year={2020}
