@@ -24,27 +24,6 @@ This repository contains code for the implementation of HateGAN.
 | WZ      | Binary | hate (3,435) non-hate (9,767)                     |
 | DT      | Multi  | hate (1,430) offensive (19,190) beither (4,163)   |  
 
-## Experiments for Baseline Models
-
-Data Distribution  
-- For combined dataset, hate from Hate Lingo, Normal from SemEval, Harassment and FOUNTA
-
-| Dataset | Type   | Label (Count)                                     |
-| :-----: | :----: | :-----------------------------------------------: | 
-| WZ      | Binary | hate (3,435) non-hate (9,767)                     |
-| DT      | Multi  | hate (1,430) offensive (19,190) beither (4,163)   |
-| FOUNTA  | Multi  | hate (3,907) abusive (19,232) normal (1,430)      |
-| COMBINED| Multi  | hate (1,995) normal (15,075) offensive (19,389)   |
-
-Results
-
-| Dataset | Type   | Prec | Rec | F1  | Prec-Hate | Rec-Hate | F1-Hate |
-| :-----: | :----: | :--: | :-: | :-: | :-------: | :------: | :-----: |
-| WZ      | Binary | 78.19|79.33|76.34|62.2       |45.8      |46.6     |
-| DT      | Multi  | 88.98|90.02|89.02|54.6       |23.8      |32.0     |
-| FOUNTA  | Multi  | 90.72|91.65|90.91|26.9       |26.2      |35.0     |  
-| COMBINE | Multi  | 90.78|91.08|90.85|62.8       |49.0      |88.0     |
-
 ## Getting Started  
 
 - Pretrain the toxic comment detection model, use code in Toxic Model.ipynb
