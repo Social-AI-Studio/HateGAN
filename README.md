@@ -36,23 +36,7 @@ This repository contains code for the implementation of HateGAN.
 
     ``` python main.py ``` 
 
-
-## Reference  
-Referred paper:
-```
-@inproceedings{DBLP:conf/aaai/YuZWY17,
-  author    = {Lantao Yu and Weinan Zhang and Jun Wang and Yong Yu},
-  title     = {SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient},
-  booktitle = {Conference on Artificial Intelligence,},
-  pages     = {2852--2858},
-  publisher = {{AAAI} Press},
-  year      = {2017}
-}
-```   
-
-Referred Code:
-<https://github.com/X-czh/SeqGAN-PyTorch>
-
+We have also reference the SeqGAN implementation: <https://github.com/X-czh/SeqGAN-PyTorch>.
 
 ## Acknowledge  
 To cite:
@@ -60,5 +44,10 @@ To cite:
 @inproceedings{cao2020hategan,
   title={HateGAN: Adversarial Generative-Based Data Augmentation for Hate Speech Detection},
   author={Cao, Rui and Lee, Roy Ka-Wei},
-  booktitle={The 28th International Conference on Computational Linguistics},
+  booktitle={Proceedings of the 28th International Conference on Computational Linguistics},
+  pages={6327--6338},
   year={2020}
+}
+```
+
+
